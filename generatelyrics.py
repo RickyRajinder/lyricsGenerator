@@ -12,7 +12,7 @@ def getLyrics():
                'Wisin', 'Yandel', 'Wisin & Yandel', 'Arcángel', 'Tego Calderón',
               'Anonimus', 'Juhn', 'Darell', 'Zion & Lennox', 'Noriel',
                'Cosculluela', 'Ñengo Flow', 'Juanka "El Problematik"', 'Bryant Myers',
-               'Lary Over']
+               'Lary Over','Manuel Turizo', 'Justin Quiles']
 
     lyrics = ""
     index = []
