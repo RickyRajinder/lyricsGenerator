@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$USER_HOME$/LyricsGenius/.idea/LyricsGenius.iml" filepath="$USER_HOME$/LyricsGenius/.idea/LyricsGenius.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/lyricsGenerator.iml" filepath="$PROJECT_DIR$/.idea/lyricsGenerator.iml" />
-    </modules>
-  </component>
-</project>

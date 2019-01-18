@@ -4,6 +4,7 @@ from random import choice
 
 
 def getLyrics():
+    print("Getting lyrics from Genius API...")
     token = 'IDaz9BipEhMH7Tpcgrl3WIaJvslArOP_wPkrSgZyUwJA7Mjlht_aFBvXYJGzhvud'
     api = genius.Genius(token)
     artists = ['Ozuna', 'Anuel AA', 'J Alvarez', 'Daddy Yankee', 'Don Omar', 'Bad Bunny',
@@ -22,13 +23,17 @@ def getLyrics():
         i += 1
 
     for x in artists:
-        artist = api.search_artist(x, max_songs=50)
+        artist = api.search_artist(x, max_songs=5)
         for y in index:
             if index[y] == len(artist.songs):
                 break
             lyrics += artist.songs[y].lyrics + "\n"
 
     formattedLyrics = re.sub("[\(\[].*?[\)\]]", "", lyrics)
+    txtfile = open("lyricsfile.txt", "w")
+    txtfile.write(formattedLyrics)
+    txtfile.close()
+    print("DONE")
     return formattedLyrics
 
 
@@ -55,6 +60,7 @@ def getNextCharacter(model, fragment):
 
 
 def generateLyrics(trainingText, order, length):
+    print("Generando una letra chido..." + "\n")
     model = generateModel(trainingText, order)
     currentFragment = trainingText[0:order]
     output = ""
@@ -65,10 +71,12 @@ def generateLyrics(trainingText, order, length):
     return (output)
 
 
-print("Generando una letra chido..." + "\n")
-lyrics = getLyrics()
 
-generated = generateLyrics(lyrics, 8, 600)
+getLyrics()
 
-print(generated)
+# with open('lyricsfile.txt', 'r') as myfile:
+#    lyrics = myfile.read()
+#generated = generateLyrics(lyrics, 8, 600)
+
+#print(generated)
 
