@@ -72,11 +72,11 @@ def generateLyrics(trainingText, order, length):
 
 
 
-getLyrics()
+# getLyrics()
 
-# with open('lyricsfile.txt', 'r') as myfile:
-#    lyrics = myfile.read()
-#generated = generateLyrics(lyrics, 8, 600)
+with open('lyricsfile.txt', 'r') as myfile:
+    lyrics = myfile.read()
+generated = generateLyrics(lyrics, 8, 600)
 
-#print(generated)
+print(generated)
 
